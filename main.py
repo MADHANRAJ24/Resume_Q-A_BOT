@@ -9,7 +9,7 @@ import re
 load_dotenv(override=True)
 
 # Initialize Groq LLM
-llm = ChatGroq(model="mixtral-8x7b-32768", temperature=0.7)
+llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0.7)
 
 st.set_page_config(page_title="Resume Q&A BOT")
 st.title("Resume Based Interview Q&A Bot")
@@ -75,4 +75,5 @@ if upload_file is not None:
 
         st.subheader("Generated Q&A")
         st.markdown(response.content)
+
 
